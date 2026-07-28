@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --font-display: "Century Gothic", "Segoe UI Semibold", "Poppins", ui-sans-serif,
+    system-ui, -apple-system, sans-serif;
+  --font-body: "Segoe UI", ui-sans-serif, system-ui, -apple-system, Roboto,
+    "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+  --background: #F7F6F1;
+  --surface: #FFFFFF;
+  --surface-2: #EFEDE4;
+  --foreground: #14171C;
+  --muted: #5C6270;
+  --border: #DEDACD;
+  --accent: #0E7C74;      /* teal — dev/terminal accent */
+  --accent-2: #C4661F;    /* warm amber-clay — secondary accent */
+  --accent-soft: #0E7C7414;
+  --tab-bar: #ECE9DD;
+}
+
+.dark {
+  --background: #0B0F14;
+  --surface: #121821;
+  --surface-2: #171F2A;
+  --foreground: #E9EDF2;
+  --muted: #8C97A6;
+  --border: #232C39;
+  --accent: #4FD9CB;
+  --accent-2: #F0A860;
+  --accent-soft: #4FD9CB1A;
+  --tab-bar: #0E1319;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-tab-bar: var(--tab-bar);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+/* Custom scrollbar to match the IDE feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
