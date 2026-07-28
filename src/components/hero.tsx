@@ -100,24 +100,17 @@ export function Hero() {
               <span className="h-2.5 w-2.5 rounded-full bg-[#EE6A5F]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#F5BD4F]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#61C454]" />
-              <span className="ml-3 font-mono text-[11px] text-muted">
-                profile.jpg
-              </span>
             </div>
-            <div className="relative aspect-square w-full">
+            <div className="relative aspect-[4/5] w-full">
               <Image
-                src="/images/profile-placeholder.svg"
-                alt="Placeholder photo of Ahnaf Thowfeek — replace with your own"
+                src="/images/profile.png"
+                alt="Placeholder photo of Ahnaf Thowfeek"
                 fill
                 className="object-cover"
                 priority
               />
             </div>
           </div>
-          <p className="mt-3 text-center font-mono text-[11px] text-muted">
-            placeholder — swap /public/images/profile-placeholder.svg for your
-            real photo
-          </p>
         </motion.div>
       </motion.div>
     </section>
