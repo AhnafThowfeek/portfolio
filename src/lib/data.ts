@@ -13,6 +13,18 @@ export type Project = {
 
 export const liveProjects: Project[] = [
   {
+    slug: "ramayana-heritage",
+    name: "Ramayana Heritage",
+    tagline: "Travel · heritage trail",
+    description:
+      "A heritage-trail travel site built with Next.js, tracing the Ramayana trail across Sri Lanka, combining storytelling pages with practical tour information.",
+    tags: ["Next.js", "React", "Travel", "Content Design"],
+    url: "https://www.ramayanaheritage.com/",
+    domain: "ramayanaheritage.com",
+    category: "Live Client Work",
+    accent: "#C9762B",
+  },
+  {
     slug: "dynamic-ace-lanka",
     name: "Dynamic Ace Lanka",
     tagline: "E-commerce · wellness supplements",
@@ -60,18 +72,6 @@ export const liveProjects: Project[] = [
     category: "Live Client Work",
     accent: "#E08E45",
   },
-  {
-    slug: "ramayana-heritage",
-    name: "Ramayana Heritage",
-    tagline: "Travel · heritage trail",
-    description:
-      "A heritage-trail travel site tracing the Ramayana trail across Sri Lanka, combining storytelling pages with practical tour information.",
-    tags: ["WordPress", "Travel", "Content Design"],
-    url: "https://www.ramayanaheritage.com/",
-    domain: "ramayanaheritage.com",
-    category: "Live Client Work",
-    accent: "#C9762B",
-  },
 ];
 
 export const buildProjects: Project[] = [
@@ -94,16 +94,6 @@ export const buildProjects: Project[] = [
     tags: ["Angular", "Node.js", "Express", "MongoDB"],
     category: "Personal Project",
     accent: "#DD2476",
-  },
-  {
-    slug: "appointment-booking",
-    name: "Appointment Booking System",
-    tagline: "React · MySQL · JWT",
-    description:
-      "A scheduling system with automated slot management and role-based access — cut scheduling conflicts by 35% and lifted booking efficiency by 40%.",
-    tags: ["React.js", "Node.js", "MySQL", "JWT", "RBAC"],
-    category: "Personal Project",
-    accent: "#4C6EF5",
   },
   {
     slug: "eventpro",
@@ -129,9 +119,10 @@ export const buildProjects: Project[] = [
 
 export const skills = {
   Languages: ["Python", "JavaScript", "TypeScript", "Java", "C", "C++"],
-  "Frameworks & Libraries": ["React", "Node.js", "Express.js", "Bootstrap"],
+  "Frameworks & Libraries": ["React", "Next.js", "Node.js", "Express.js", "Bootstrap"],
   "Web & Data": ["HTML", "CSS", "Tailwind CSS", "REST APIs", "WordPress"],
   Databases: ["MySQL", "MongoDB", "SQL"],
+  "AI Tools": ["Claude", "ChatGPT", "GitHub Copilot", "DeepSeek", "Cursor", "OpenClaw"],
   Tools: ["Git", "GitHub", "Figma", "Canva"],
 };
 
@@ -142,10 +133,11 @@ export const experience = [
     location: "Colombo, Sri Lanka",
     period: "Mar 2024 – Sep 2024",
     points: [
-      "Led development of software solutions for SMEs, contributing to a 30% revenue increase.",
-      "Supervised a team of 3 developers using Agile methodologies, lifting client satisfaction by 20%.",
-      "Built and maintained WordPress sites for live e-commerce, tourism, and travel clients.",
-      "Designed and implemented UI/UX for websites and internal applications.",
+      "Led development of software solutions for SME clients, taking projects from initial requirements through to launch and handover.",
+      "Supervised a small team of developers using Agile methodologies — running sprint planning, code reviews, and client check-ins to keep delivery on track.",
+      "Built and maintained WordPress and custom-coded websites for e-commerce, tourism, and travel clients, handling everything from bug fixes to ongoing content and performance updates.",
+      "Designed and implemented UI/UX for public-facing websites and internal applications, turning client feedback into practical interface improvements.",
+      "Delivered scalable, reliable software across multiple concurrent client projects while keeping each one on schedule.",
     ],
   },
 ];

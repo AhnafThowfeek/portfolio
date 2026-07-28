@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight, MapPin } from "lucide-react";
+import { RotatingWord } from "./rotating-word";
 
 const container = {
   hidden: {},
@@ -13,7 +14,11 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
+  },
 };
 
 export function Hero() {
@@ -45,21 +50,23 @@ export function Hero() {
             className="font-[family-name:var(--font-display)] text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl"
           >
             Ahnaf Thowfeek builds
-            <span className="block text-accent">e-commerce, booking</span>
-            <span className="block">&amp; travel platforms.</span>
+            <RotatingWord />
           </motion.h1>
 
           <motion.p
             variants={item}
             className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
           >
-            Full-stack developer and IT undergraduate in Colombo, Sri Lanka.
-            I ship production websites for real clients — storefronts,
-            scheduling systems, and tourism sites — with React, Node.js, and
-            a close eye on UX.
+            Full-stack developer and IT undergraduate in Colombo, Sri Lanka. I
+            ship production websites for real clients — storefronts, scheduling
+            systems, and tourism sites — with React, Node.js, and a close eye on
+            UX.
           </motion.p>
 
-          <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-4">
+          <motion.div
+            variants={item}
+            className="mt-9 flex flex-wrap items-center gap-4"
+          >
             <a
               href="#work"
               className="rounded-md bg-accent px-5 py-3 font-mono text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
@@ -93,7 +100,9 @@ export function Hero() {
               <span className="h-2.5 w-2.5 rounded-full bg-[#EE6A5F]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#F5BD4F]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#61C454]" />
-              <span className="ml-3 font-mono text-[11px] text-muted">profile.jpg</span>
+              <span className="ml-3 font-mono text-[11px] text-muted">
+                profile.jpg
+              </span>
             </div>
             <div className="relative aspect-square w-full">
               <Image
@@ -106,7 +115,8 @@ export function Hero() {
             </div>
           </div>
           <p className="mt-3 text-center font-mono text-[11px] text-muted">
-            placeholder — swap /public/images/profile-placeholder.svg for your real photo
+            placeholder — swap /public/images/profile-placeholder.svg for your
+            real photo
           </p>
         </motion.div>
       </motion.div>
